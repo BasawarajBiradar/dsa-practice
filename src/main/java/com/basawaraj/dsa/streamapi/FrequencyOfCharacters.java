@@ -1,4 +1,4 @@
-package com.basawaraj.dsa.streamAPI;
+package com.basawaraj.dsa.streamapi;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
