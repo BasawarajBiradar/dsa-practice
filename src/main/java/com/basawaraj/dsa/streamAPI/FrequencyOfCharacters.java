@@ -1,5 +1,6 @@
 package com.basawaraj.dsa.streamAPI;
 
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -10,7 +11,7 @@ public class FrequencyOfCharacters {
         String str = "hello";
         Map<Character, Long> frequency  =
                 str.chars().mapToObj(s -> (char) s)
-                        .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+                        .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new,Collectors.counting()));
         System.out.println(frequency);
     }
 
